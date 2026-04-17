@@ -3,197 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>臺北市政府每日新聞摘要 - 2026-04-16</title>
+    <title>臺北市政府每日新聞摘要</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Noto Sans TC', sans-serif;
-            background-color: #f8f9fa;
-            color: #2c3e50;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        .header {
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #f8f9fa; color: #2c3e50; margin: 0; padding: 0; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); color: white; padding: 40px 20px; text-align: center; }
         .header h1 { margin: 0; font-size: 2.5rem; }
         .header p { margin: 10px 0 0 0; font-size: 1.2rem; opacity: 0.9; }
-        .line-promo {
-            background: #00B900;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-        .line-promo a {
-            color: white;
-            text-decoration: underline;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            background: #000;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .article-card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            padding: 30px;
-            margin-bottom: 30px;
-            border-left: 5px solid #e74c3c;
-        }
-        
-        .article-title {
-            font-size: 1.8rem;
-            color: #2c3e50;
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-weight: 900;
-        }
-        
-        .label {
-            font-weight: bold;
-            color: #e74c3c;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-        
-        .script-box {
-            background: #fdfaf6;
-            padding: 20px;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            color: #34495e;
-            margin-bottom: 20px;
-            border: 1px solid #eee;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.2s;
-        }
+        .line-promo { background: #00B900; color: white; text-align: center; padding: 15px; font-weight: bold; font-size: 1.1rem; }
+        .line-promo a { color: white; text-decoration: underline; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background: #000; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .article-card { background: white; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); padding: 30px; margin-bottom: 30px; border-left: 5px solid #e74c3c; }
+        .article-title { font-size: 1.8rem; color: #2c3e50; margin-top: 0; margin-bottom: 20px; font-weight: 900; }
+        .label { font-weight: bold; color: #e74c3c; font-size: 1.1rem; margin-bottom: 10px; text-transform: uppercase; }
+        .script-box { background: #fdfaf6; padding: 20px; border-radius: 8px; font-size: 1.2rem; color: #34495e; margin-bottom: 20px; border: 1px solid #eee; }
+        .btn { display: inline-block; background: #3498db; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.2s; }
         .btn:hover { background: #2980b9; }
-        
-        .carousel {
-            position: relative;
-            width: 100%;
-            margin-top: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #eee;
-        }
-        .carousel-images {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 100%;
-        }
-        .carousel-images img {
-            width: 100%;
-            flex-shrink: 0;
-            object-fit: cover;
-        }
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
-            color: white;
-            border: none;
-            cursor: pointer;
-            padding: 10px 15px;
-            font-size: 1.5rem;
-            border-radius: 5px;
-            z-index: 10;
-        }
+        .carousel { position: relative; width: 100%; margin-top: 20px; border-radius: 8px; overflow: hidden; background: #eee; }
+        .carousel-images { display: flex; transition: transform 0.5s ease-in-out; width: 100%; }
+        .carousel-images img { width: 100%; flex-shrink: 0; object-fit: cover; }
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 10px 15px; font-size: 1.5rem; border-radius: 5px; z-index: 10; }
         .carousel-btn:hover { background: rgba(0,0,0,0.8); }
         .carousel-prev { left: 10px; }
         .carousel-next { right: 10px; }
-        .carousel-indicators {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 5px;
-            z-index: 10;
-        }
-        .indicator {
-            width: 10px;
-            height: 10px;
-            background: rgba(255,255,255,0.5);
-            border-radius: 50%;
-            cursor: pointer;
-        }
+        .carousel-indicators { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; z-index: 10; }
+        .indicator { width: 10px; height: 10px; background: rgba(255,255,255,0.5); border-radius: 50%; cursor: pointer; }
         .indicator.active { background: white; }
-        
-        .img-container {
-            margin-top: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #eee;
-            position: relative;
-        }
-        .img-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .ai-watermark {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.8rem;
-        }
-        
-        .footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-            margin-top: 50px;
-        }
-        .footer img {
-            width: 150px;
-            border-radius: 10px;
-            margin: 20px 0;
-            border: 4px solid white;
-        }
+        .img-container { margin-top: 20px; border-radius: 8px; overflow: hidden; background: #eee; position: relative; }
+        .img-container img { width: 100%; height: auto; display: block; }
+        .ai-watermark { position: absolute; bottom: 10px; right: 10px; background: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; }
+        .footer { background: #2c3e50; color: white; text-align: center; padding: 50px 20px; margin-top: 50px; }
+        .footer img { width: 150px; border-radius: 10px; margin: 20px 0; border: 4px solid white; }
+        .pagination { display: flex; justify-content: center; margin-top: 40px; gap: 10px; }
+        .page-btn { background: #fff; border: 2px solid #3498db; color: #3498db; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1.1rem; transition: all 0.2s; }
+        .page-btn:hover { background: #f0f8ff; }
+        .page-btn.active { background: #3498db; color: white; }
+        .page-content { display: none; }
+        .page-content.active { display: block; }
+        .date-header { text-align: center; color: #7f8c8d; margin-bottom: 30px; font-size: 1.3rem; }
     </style>
 </head>
 <body>
@@ -202,7 +51,7 @@
     </div>
     <div class="header">
         <h1>臺北市政府新聞摘要</h1>
-        <p>2026-04-16 - 每日為您整理五大重點新聞</p>
+        <p>每日為您整理五大重點新聞</p>
     </div>
     
     <div class="container">
@@ -211,25 +60,22 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/egeWlt0vmR4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             
-
+<div id="page-0" class="page-content active"><h2 class="date-header">新聞日期：2026-04-17</h2>
         <div class="article-card">
             <h2 class="article-title">1. 永續城市、碳為觀止－ 北市客家公園響應世界地球日，打造零廢棄園遊會</h2>
-            
             <div class="label">播報稿 / 引用重點</div>
             <div class="script-box">臺北市客家文化主題公園響應世界地球日，將於4月18日至19日舉辦「永續城市，碳為觀止」零廢棄園遊會。活動結合了二手物資、青年手創與綠色闖關遊戲，邀請市民一起實踐低碳生活，用行動守護地球。</div>
-            
             <p><strong>選錄原因：</strong>這項活動結合了當前的世界地球日環保議題，規模盛大且適合親子參與，是非常好的週末休閒與教育資訊。</p>
-            
             <a href="https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&s=90038D19F3082BE4" target="_blank" class="btn">查看官方原文與聯絡人</a>
             
-            <div class="carousel" id="carousel-0">
-                <button class="carousel-btn carousel-prev" onclick="moveCarousel(0, -1)">&#10094;</button>
-                <button class="carousel-btn carousel-next" onclick="moveCarousel(0, 1)">&#10095;</button>
-                <div class="carousel-images" id="images-0">
+            <div class="carousel" id="carousel-0-0">
+                <button class="carousel-btn carousel-prev" onclick="moveCarousel('0-0', -1)">&#10094;</button>
+                <button class="carousel-btn carousel-next" onclick="moveCarousel('0-0', 1)">&#10095;</button>
+                <div class="carousel-images" id="images-0-0">
             <img src="https://www-ws.gov.taipei/001/Upload/380/relpic/10162/9564865/677ee075-8028-4e45-8ca4-6ed13e8f887d.jpg" alt="News Image 1"><img src="https://www-ws.gov.taipei/001/Upload/380/relpic/10162/9564865/fee11850-bd5a-4c27-a27b-4718485f6843.jpg" alt="News Image 2"><img src="https://www-ws.gov.taipei/001/Upload/380/relpic/10162/9564865/821f0dea-dfa8-488a-b14d-37c7cced022d.jpg" alt="News Image 3"><img src="https://www-ws.gov.taipei/001/Upload/380/relpic/10162/9564865/0d3468cd-6362-4dee-808b-4a592ffe0ad5.jpg" alt="News Image 4"><img src="https://www-ws.gov.taipei/001/Upload/380/relpic/10162/9564865/67415201-ffc7-4a90-aba4-1c2015f1da24.jpg" alt="News Image 5"><img src="https://www-ws.gov.taipei/001/Upload/380/relpic/10162/9564865/284969d2-f744-4908-9519-e537a5985c8a.jpg" alt="News Image 6">
                 </div>
-                <div class="carousel-indicators" id="indicators-0">
-            <div class="indicator active" onclick="setCarousel(0, 0)"></div><div class="indicator " onclick="setCarousel(0, 1)"></div><div class="indicator " onclick="setCarousel(0, 2)"></div><div class="indicator " onclick="setCarousel(0, 3)"></div><div class="indicator " onclick="setCarousel(0, 4)"></div><div class="indicator " onclick="setCarousel(0, 5)"></div>
+                <div class="carousel-indicators" id="indicators-0-0">
+            <div class="indicator active" onclick="setCarousel('0-0', 0)"></div><div class="indicator " onclick="setCarousel('0-0', 1)"></div><div class="indicator " onclick="setCarousel('0-0', 2)"></div><div class="indicator " onclick="setCarousel('0-0', 3)"></div><div class="indicator " onclick="setCarousel('0-0', 4)"></div><div class="indicator " onclick="setCarousel('0-0', 5)"></div>
                 </div>
             </div>
             
@@ -237,22 +83,19 @@
 
         <div class="article-card">
             <h2 class="article-title">2. 臺北攜手Agoda四大面向合作簽署MOU  啟動「Taipei Nice Stay」訂房優惠 精準引客帶動觀光</h2>
-            
             <div class="label">播報稿 / 引用重點</div>
             <div class="script-box">臺北市政府與知名旅遊平台Agoda正式簽署合作備忘錄，並啟動「Taipei Nice Stay」年度行銷計畫。配合國際級演唱會熱潮，旅客預訂指定旅宿最高可享25折優惠，期盼藉此吸引更多國內外旅客深度體驗臺北魅力。</div>
-            
             <p><strong>選錄原因：</strong>此新聞與觀光及民眾訂房優惠息息相關，高達25折的折扣對民眾有直接吸引力，也是行銷臺北觀光的重大合作。</p>
-            
             <a href="https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&s=C1D1B7CC71AECA81" target="_blank" class="btn">查看官方原文與聯絡人</a>
             
-            <div class="carousel" id="carousel-1">
-                <button class="carousel-btn carousel-prev" onclick="moveCarousel(1, -1)">&#10094;</button>
-                <button class="carousel-btn carousel-next" onclick="moveCarousel(1, 1)">&#10095;</button>
-                <div class="carousel-images" id="images-1">
+            <div class="carousel" id="carousel-0-1">
+                <button class="carousel-btn carousel-prev" onclick="moveCarousel('0-1', -1)">&#10094;</button>
+                <button class="carousel-btn carousel-next" onclick="moveCarousel('0-1', 1)">&#10095;</button>
+                <div class="carousel-images" id="images-0-1">
             <img src="https://www-ws.gov.taipei/001/Upload/308/relpic/10162/9564839/2aad885c-375d-4194-a8b0-e95db299e2ff.jpg" alt="News Image 1"><img src="https://www-ws.gov.taipei/001/Upload/308/relpic/10162/9564839/bc001e87-d50a-4e68-967a-433cddecabc3.jpg" alt="News Image 2"><img src="https://www-ws.gov.taipei/001/Upload/308/relpic/10162/9564839/45f8757d-32e6-478f-ab84-ae7c7972f129.jpg" alt="News Image 3">
                 </div>
-                <div class="carousel-indicators" id="indicators-1">
-            <div class="indicator active" onclick="setCarousel(1, 0)"></div><div class="indicator " onclick="setCarousel(1, 1)"></div><div class="indicator " onclick="setCarousel(1, 2)"></div>
+                <div class="carousel-indicators" id="indicators-0-1">
+            <div class="indicator active" onclick="setCarousel('0-1', 0)"></div><div class="indicator " onclick="setCarousel('0-1', 1)"></div><div class="indicator " onclick="setCarousel('0-1', 2)"></div>
                 </div>
             </div>
             
@@ -260,12 +103,9 @@
 
         <div class="article-card">
             <h2 class="article-title">3. 警民攜手暖心守護，協助迷途長者平安返家</h2>
-            
             <div class="label">播報稿 / 引用重點</div>
             <div class="script-box">大同分局員警在夜間巡邏時，於大橋頭捷運站發現一名迷惘徘徊的失智老婦人。員警耐心引導老婦人寫下姓名，並順利聯繫當地里長，成功幫助老婦人平安返家，展現了警民合作的溫暖力量。</div>
-            
             <p><strong>選錄原因：</strong>這是一則充滿人情味的社會暖新聞，同時也能藉機提醒家中有高齡長者的市民多加留意照護。</p>
-            
             <a href="https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&s=9FF17E77B13E3B68" target="_blank" class="btn">查看官方原文與聯絡人</a>
             
             <div class="img-container">
@@ -277,12 +117,9 @@
 
         <div class="article-card">
             <h2 class="article-title">4. 臺北市新增1例麻疹境外移入病例 足跡重疊者請進行健康監測18天</h2>
-            
             <div class="label">播報稿 / 引用重點</div>
             <div class="script-box">臺北市衛生局公布新增一例麻疹境外移入確診個案。提醒曾於相關時間與確診者足跡重疊的民眾，務必進行18天的自我健康監測，若出現發燒、出疹等疑似症狀，請盡速戴上口罩就醫並主動告知旅遊史。</div>
-            
             <p><strong>選錄原因：</strong>傳染病疫情直接關係到市民的健康安全，發布這類消息能提醒民眾提高警覺，防範疫情擴散。</p>
-            
             <a href="https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&s=1BC5311B0C40E2CD" target="_blank" class="btn">查看官方原文與聯絡人</a>
             
             <div class="img-container">
@@ -294,27 +131,24 @@
 
         <div class="article-card">
             <h2 class="article-title">5. 私立育達高中-青青小田園實作學習　育達烘焙科從土地培養食安意識</h2>
-            
             <div class="label">播報稿 / 引用重點</div>
             <div class="script-box">臺北市私立育達高中烘焙科將食安教育延伸至農田，帶領學生在校內的「青青小田園」親手栽種農作物。透過從土地到餐桌的實作體驗，讓學生深刻體會食材的珍貴，培養更紮實的食品安全觀念。</div>
-            
             <p><strong>選錄原因：</strong>教育創新的正面新聞，展示了學校如何落實食農教育，對關心教育發展與食安的市民具有啟發性。</p>
-            
             <a href="https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&s=2E1FBE241ACCE3C0" target="_blank" class="btn">查看官方原文與聯絡人</a>
             
-            <div class="carousel" id="carousel-4">
-                <button class="carousel-btn carousel-prev" onclick="moveCarousel(4, -1)">&#10094;</button>
-                <button class="carousel-btn carousel-next" onclick="moveCarousel(4, 1)">&#10095;</button>
-                <div class="carousel-images" id="images-4">
+            <div class="carousel" id="carousel-0-4">
+                <button class="carousel-btn carousel-prev" onclick="moveCarousel('0-4', -1)">&#10094;</button>
+                <button class="carousel-btn carousel-next" onclick="moveCarousel('0-4', 1)">&#10095;</button>
+                <div class="carousel-images" id="images-0-4">
             <img src="https://www-ws.gov.taipei/001/Upload/342/relpic/10162/9564798/55827b5a-e6f5-47db-9cb2-26fb5f478f67.jpg" alt="News Image 1"><img src="https://www-ws.gov.taipei/001/Upload/342/relpic/10162/9564798/c0a65d49-edbc-4f78-8b00-8d30fb743a5b.jpg" alt="News Image 2">
                 </div>
-                <div class="carousel-indicators" id="indicators-4">
-            <div class="indicator active" onclick="setCarousel(4, 0)"></div><div class="indicator " onclick="setCarousel(4, 1)"></div>
+                <div class="carousel-indicators" id="indicators-0-4">
+            <div class="indicator active" onclick="setCarousel('0-4', 0)"></div><div class="indicator " onclick="setCarousel('0-4', 1)"></div>
                 </div>
             </div>
             
         </div>
-
+</div><div id="page-1" class="page-content "><h2 class="date-header">資料彙整中...</h2><div class="article-card" style="text-align: center; padding: 50px;"><h2 style="color: #7f8c8d;">敬請期待</h2><p>歷史新聞資料庫正在建立中，本頁面將於後續自動更新。</p></div></div><div id="page-2" class="page-content "><h2 class="date-header">資料彙整中...</h2><div class="article-card" style="text-align: center; padding: 50px;"><h2 style="color: #7f8c8d;">敬請期待</h2><p>歷史新聞資料庫正在建立中，本頁面將於後續自動更新。</p></div></div><div class="pagination"><button class="page-btn active" onclick="showPage(0)" id="btn-0">最新新聞</button><button class="page-btn " onclick="showPage(1)" id="btn-1">昨日新聞</button><button class="page-btn " onclick="showPage(2)" id="btn-2">前日新聞</button></div>
     </div>
     
     <div class="footer">
@@ -330,7 +164,7 @@
         
         function initCarousels() {
             document.querySelectorAll('.carousel').forEach(c => {
-                const id = c.id.split('-')[1];
+                const id = c.id.replace('carousel-', '');
                 carousels[id] = 0;
             });
         }
@@ -359,6 +193,19 @@
         function setCarousel(id, index) {
             carousels[id] = index;
             updateCarousel(id);
+        }
+        
+        function showPage(pageIdx) {
+            // Hide all pages
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(`page-${pageIdx}`).classList.add('active');
+            document.getElementById(`btn-${pageIdx}`).classList.add('active');
+            
+            // Scroll to top of container
+            document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
         }
         
         window.onload = initCarousels;
