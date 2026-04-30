@@ -19,9 +19,10 @@ Right now, you must calculate the current Taipei Time (which is UTC time + 8 hou
        - Step 1: Update `5pm_pipeline_date` to "running" in `memory/heartbeat-state.json`.
        - Step 2: Fetch the OpenData JSON, merge it with `news_12pm.json`, deduplicate against `memory/published_articles.txt`.
        - Step 3: YOU MUST USE YOUR LLM BRAIN TO EVALUATE THE ARTICLES AND WRITE THE JSON YOURSELF using the write tool. DO NOT RUN ANY PYTHON SCRIPT TO DO THE SELECTION. Select the 5 best articles and manually write them to `~/tw-gov-video/output/selected_articles.json`. 
-         *CRITICAL: The JSON MUST be an object with a `"selected"` array. Do not just make it a raw array.*
-       - Step 4: Run the exact command: `python3 ~/tw-gov-video/scripts/inject_images.py && python3 ~/tw-gov-video/scripts/generate_images.py && bash ~/tw-gov-video/scripts/run_tts.sh && bash ~/tw-gov-video/scripts/run_render.sh && python3 ~/tw-gov-video/scripts/upload_youtube.py && python3 ~/tw-gov-video/scripts/deploy_web.py && cd ~/tw-gov-video && git add docs/index.html && git commit -m "Auto-update website" && git push origin main && python3 ~/tw-gov-video/scripts/send_line.py`
-       - Step 5: After the command finishes successfully, update `5pm_pipeline_date` in `memory/heartbeat-state.json` to today's actual Taipei date.
-       - Step 6: Send a message to the Discord channel confirming it is done.
+         *CRITICAL SCHEMA:* The JSON MUST be an object with a `"selected"` array. *Each* item in the array MUST contain a newly generated `"script"` field (a short 1-2 sentence voiceover summary in Traditional Chinese) and a `"reason"` field (why it was selected). DO NOT just dump the raw OpenData. YOU MUST WRITE THE SCRIPTS.
+       - Step 4: Delete old audio: `rm -f ~/tw-gov-video/output/voice_*.mp3`
+       - Step 5: Run the exact command: `python3 ~/tw-gov-video/scripts/inject_images.py && python3 ~/tw-gov-video/scripts/generate_images.py && bash ~/tw-gov-video/scripts/run_tts.sh && bash ~/tw-gov-video/scripts/run_render.sh && python3 ~/tw-gov-video/scripts/upload_youtube.py && python3 ~/tw-gov-video/scripts/deploy_web.py && cd ~/tw-gov-video && git add docs/index.html && git commit -m "Auto-update website" && git push origin main && python3 ~/tw-gov-video/scripts/send_line.py`
+       - Step 6: After the command finishes successfully, update `5pm_pipeline_date` in `memory/heartbeat-state.json` to today's actual Taipei date.
+       - Step 7: Send a message to the Discord channel confirming it is done.
 
 If neither of these tasks need to be done, you MUST reply ONLY with `HEARTBEAT_OK`.
