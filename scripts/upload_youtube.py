@@ -27,7 +27,9 @@ if len(sys.argv) >= 3:
     VIDEO_FILE = Path(sys.argv[2])
 if len(sys.argv) >= 4:
     PLAYLIST_ID = sys.argv[3]
+if "jp" in str(INPUT_JSON):
     IS_JAPANESE = True
+
 
 THUMBNAIL_FILE = OUTPUT_DIR / "frame_intro.png"
 TIMESTAMPS_FILE = OUTPUT_DIR / "youtube_timestamps.txt"
@@ -47,7 +49,17 @@ def get_video_metadata():
         
         if IS_JAPANESE:
             title = f"台北市政ニュース {datetime.now().strftime('%Y-%m-%d')}"
-            description_lines = ["今日の台北市政ニュースのハイライト：\n"]
+            description_lines = []
+            description_lines.append(f"📱 LINE公式アカウントを追加して、毎日のハイライトを自動受信:")
+            description_lines.append(f"{LINE_FRIEND_LINK}\n")
+            description_lines.append(f"🌐 ウェブサイト版 (ニュースのハイライトと元のリンク):\n{WEB_PORTAL_URL}jp/\n")
+            description_lines.append("-" * 30 + "\n")
+            description_lines.append("今日の台北市政ニュースのハイライト：\n")
+            
+            if TIMESTAMPS_FILE.exists():
+                description_lines.append("【タイムスタンプ】")
+                description_lines.append(TIMESTAMPS_FILE.read_text().strip())
+                description_lines.append("\n" + "-" * 30 + "\n")
         else:
             title = f"每日新聞 {datetime.now().strftime('%Y-%m-%d')}"
             description_lines = []
@@ -121,7 +133,16 @@ def main():
         if not IS_JAPANESE:
             YOUTUBE_URL_FILE.write_text(video_url)
         
-        if THUMBNAIL_FILE.exists() and not IS_JAPANESE:
+        if IS_JAPANESE:
+            jp_thumb = OUTPUT_DIR / "frame_jp_0.png"
+            if jp_thumb.exists():
+                print(f"Uploading Custom Thumbnail for Japanese: {jp_thumb}")
+                youtube.thumbnails().set(
+                    videoId=video_id,
+                    media_body=MediaFileUpload(str(jp_thumb))
+                ).execute()
+                print("Japanese Thumbnail successfully applied!")
+        elif THUMBNAIL_FILE.exists():
             print(f"Uploading Custom Thumbnail: {THUMBNAIL_FILE}")
             youtube.thumbnails().set(
                 videoId=video_id,
