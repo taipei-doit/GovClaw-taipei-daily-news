@@ -72,5 +72,24 @@
       <itunes:episodeType>full</itunes:episodeType>
       <enclosure url="https://float-ben.github.io/GovClaw-taipei-daily-news/podcasts/episode_2026-05-22.mp3" length="488109" type="audio/mpeg"/>
     </item>
+    <item>
+      <title>每日市政摘要 2026-05-23</title>
+      <description>今日臺北市政重點新聞摘要：
+1. 2026客家時尚獎正式啟動 總獎金破百萬
+2026客家時尚獎正式啟動，總獎金高達百萬！邀請各路設計好手將傳統客家元素融入現代時尚，展現客家文化新風貌。快來發揮創意，贏取高額獎金！
+2. 2026捷運盃黑客松開跑 冠軍獎金5萬元
+2026捷運盃黑客松熱烈報名中，冠軍可獲5萬元獎金！這是一個發揮程式設計長才、解決真實城市問題的絕佳舞台。熱愛挑戰的程式高手們，千萬別錯過！
+3. 臺北市新增1例麻疹境外移入病例 足跡重疊者請進行健康監測18天
+臺北市新增1例麻疹境外移入病例，提醒民眾注意防範！若曾與確診者足跡重疊，請務必進行18天的自我健康監測。如有疑似症狀，請儘速就醫並告知接觸史。
+4. 北市首屆性別友善廁所標章認證 合格名單出爐
+臺北市首屆性別友善廁所標章認證結果揭曉！市府致力打造更包容、安全的如廁環境，讓不同性別的民眾都能安心使用。一起來看看哪些場所獲得了這項認證吧！
+5. 四月天琴座流星雨周四達極大，想看火流星別錯過
+天文迷注意！四月天琴座流星雨將在本周四達到極大期。這次流星雨有機會出現明亮的火流星，把握機會抬頭仰望星空，許下你的願望吧！
+</description>
+      <pubDate>Sat, 23 May 2026 09:42:54 GMT</pubDate>
+      <guid isPermaLink="false">episode_2026-05-23.mp3</guid>
+      <itunes:episodeType>full</itunes:episodeType>
+      <enclosure url="https://float-ben.github.io/GovClaw-taipei-daily-news/podcasts/episode_2026-05-23.mp3" length="394029" type="audio/mpeg"/>
+    </item>
   </channel>
 </rss>
