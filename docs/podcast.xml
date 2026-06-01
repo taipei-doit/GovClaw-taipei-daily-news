@@ -243,5 +243,24 @@
       <itunes:episodeType>full</itunes:episodeType>
       <enclosure url="https://float-ben.github.io/GovClaw-taipei-daily-news/podcasts/episode_2026-05-31.mp3" length="539661" type="audio/mpeg"/>
     </item>
+    <item>
+      <title>每日市政摘要 2026-06-01</title>
+      <description>今日臺北市政重點新聞摘要：
+1. 臺北捷運攜手NVIDIA與Linker Vision 導入數位孿生（Digital Twin）技術 打造智慧文湖線
+臺北捷運宣布攜手NVIDIA與Linker Vision，導入數位孿生技術打造智慧文湖線。這項計畫將利用AI與3D建模模擬車站人流與列車擁擠度，為2036年文湖線重置與未來的大眾運輸智慧營運奠定基礎。
+2. 2026台北水舞嘉年華6/13盛大登場！ 開幕水火共舞點亮基隆河  水舞展演再升級打造沉浸式光影劇場
+備受矚目的「2026台北水舞嘉年華」將於6月13日在錫口碼頭彩虹橋絢麗登場！今年首度推出多層次水舞與沉浸式光影劇場，並結合開閉幕限定的「水火共舞」特效，為市民帶來一場震撼視覺的夏夜盛典。
+3. 2026年參與式預算提案票選活動6月1日強勢登場！參加網路投票抽PlayStation 5 PRO遊戲機
+臺北市「2026年參與式預算提案票選活動」即日起至6月15日開放網路投票！只要年滿16歲且在臺北市就學、工作或居住，投下您神聖的一票，就有機會抽中PlayStation 5 PRO等多項大獎，快來參與改變城市面貌的行列吧。
+4. 打造百年韌性城市聚落！ 「通化安和」公辦都更案今簽約！
+臺北市首件以「韌性聚落」為主題的公辦都更案「通化安和」今日正式簽約。這項位於捷運信義安和站旁的指標性開發案，將結合防災設計與綠建築，並跨區修復士林天母歷史建築，為臺北都會帶來兼具安全與文化的新風貌。
+5. 全災害管理新里程  臺北市率全國之先推動災防長制度​  召開首次聯繫會議  
+為了因應極端氣候挑戰，臺北市率全國之先推動「災防長制度」，提升災害防救的決策層級。此制度將有效整合各局處資源，並結合各區公所的防災協作中心，全面強化臺北作為韌性城市的防災應變量能。
+</description>
+      <pubDate>Mon, 01 Jun 2026 09:33:49 GMT</pubDate>
+      <guid isPermaLink="false">episode_2026-06-01.mp3</guid>
+      <itunes:episodeType>full</itunes:episodeType>
+      <enclosure url="https://float-ben.github.io/GovClaw-taipei-daily-news/podcasts/episode_2026-06-01.mp3" length="511533" type="audio/mpeg"/>
+    </item>
   </channel>
 </rss>
