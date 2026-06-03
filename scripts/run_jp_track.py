@@ -218,6 +218,28 @@ def create_single_slide_html(slide_type, data, img_path=""):
     <div class="bg-circle bg-c1"></div>
     <div class="bg-circle bg-c2"></div>
     {body_content}
+    <script>
+        window.addEventListener('load', function() {{
+            const col = document.querySelector('.text-column');
+            if (!col) return;
+            const elements = document.querySelectorAll('.slide-title, .script-text, .label');
+            let reduce = 0;
+            // The layout-split parent has a fixed height, so if text-column overflows its height, scrollHeight will be greater.
+            // Let's also check if any specific text element is overflowing horizontally if we want, but height is the main issue.
+            while (col.scrollHeight > col.clientHeight && reduce < 30) {{
+                reduce++;
+                elements.forEach(el => {{
+                    const style = window.getComputedStyle(el);
+                    const size = parseFloat(style.fontSize);
+                    el.style.fontSize = (size - 1) + 'px';
+                    const lineHeight = parseFloat(style.lineHeight);
+                    if (!isNaN(lineHeight)) {{
+                        el.style.lineHeight = (lineHeight - 1) + 'px';
+                    }}
+                }});
+            }}
+        }});
+    </script>
 </body>
 </html>
 """

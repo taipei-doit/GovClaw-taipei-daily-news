@@ -335,6 +335,21 @@ def generate_html():
             const target = document.getElementById(slideId);
             if (target) {
                 target.classList.add('active');
+                
+                // Auto-shrink text if it overflows the text-column
+                const col = target.querySelector('.text-column');
+                if (col) {
+                    const elements = target.querySelectorAll('.slide-title, .script-text, .reason, .label');
+                    let reduce = 0;
+                    while (col.scrollHeight > col.clientHeight && reduce < 30) {
+                        reduce++;
+                        elements.forEach(el => {
+                            const style = window.getComputedStyle(el);
+                            const size = parseFloat(style.fontSize);
+                            el.style.fontSize = (size - 1) + 'px';
+                        });
+                    }
+                }
             }
         }
     </script>
