@@ -12,7 +12,7 @@ YOUTUBE_URL_FILE = OUTPUT_DIR / "latest_youtube_url.txt"
 # The long-lived channel access token you provided
 LINE_ACCESS_TOKEN = "OzxY2CAnLdr+y7+5CYXPz+zmn/AzGd8HWK3zMNhwp70zOzLY67nbNAVM4tqlHQCwTiYEKNGQy/t5R9rSR9nB4ba3bcOEMFE8vhduey7UkCIgo8/AXEPewVLwarVDtsYciQukhcCb3rA1Dig+84lbOAdB04t89/1O/w1cDnyilFU="
 
-WEB_PORTAL_URL = "https://float-ben.github.io/GovClaw-taipei-daily-news/"
+WEB_PORTAL_URL = "https://taipei-doit.github.io/GovClaw-taipei-daily-news/"
 SPOTIFY_URL = "https://open.spotify.com/show/033jJtZiN097aPxw99mHYW"
 
 def build_message_text():

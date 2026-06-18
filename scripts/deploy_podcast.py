@@ -16,7 +16,7 @@ DOCS_DIR = BASE_DIR / "docs"
 PODCASTS_DIR = DOCS_DIR / "podcasts"
 RSS_FILE = DOCS_DIR / "podcast.xml"
 
-BASE_URL = "https://float-ben.github.io/GovClaw-taipei-daily-news/"
+BASE_URL = "https://taipei-doit.github.io/GovClaw-taipei-daily-news/"
 PODCASTS_URL = BASE_URL + "podcasts/"
 
 def format_rfc2822(dt):

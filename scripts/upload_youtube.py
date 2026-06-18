@@ -37,7 +37,7 @@ CLIENT_SECRETS_FILE = SCRIPTS_DIR / "client_secrets.json"
 CREDENTIALS_FILE = SCRIPTS_DIR / "youtube_credentials.json"
 YOUTUBE_URL_FILE = OUTPUT_DIR / "latest_youtube_url.txt"
 
-WEB_PORTAL_URL = "https://float-ben.github.io/GovClaw-taipei-daily-news/"
+WEB_PORTAL_URL = "https://taipei-doit.github.io/GovClaw-taipei-daily-news/"
 LINE_FRIEND_LINK = "https://page.line.me/290wqpej"
 
 def get_video_metadata():
