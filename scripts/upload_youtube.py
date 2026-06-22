@@ -114,11 +114,12 @@ def main():
 
     title, desc = get_video_metadata()
     try:
+        privacy_status = "unlisted" if IS_JAPANESE else "public"
         request = youtube.videos().insert(
             part="snippet,status",
             body={
                 "snippet": {"title": title, "description": desc, "categoryId": "25"},
-                "status": {"privacyStatus": "unlisted"}
+                "status": {"privacyStatus": privacy_status}
             },
             media_body=MediaFileUpload(str(VIDEO_FILE), chunksize=-1, resumable=True)
         )
