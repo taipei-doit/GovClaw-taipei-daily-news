@@ -1,4 +1,5 @@
 import json
+import os
 import base64
 import urllib.request
 import urllib.error
@@ -9,7 +10,7 @@ import google.auth.transport.requests
 from config import BASE_DIR as BASE, OUTPUT_DIR, INPUT_JSON
 
 credentials, project = google.auth.default(scopes=["https://www.googleapis.com/auth/cloud-platform"])
-PROJECT_ID = project or "doit-dic-itteam"
+PROJECT_ID = project or os.getenv("GCP_PROJECT_ID")
 LOCATION = "us-central1"
 
 def get_clean_visual_prompt(title, token):

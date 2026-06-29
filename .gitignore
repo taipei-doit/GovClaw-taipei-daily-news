@@ -40,3 +40,6 @@ experiments/
 
 # Logs
 *.log
+
+# 內部機密文件（勿進版控）
+GovClaw-機密_請勿上git/

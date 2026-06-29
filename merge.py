@@ -1,7 +1,8 @@
 import json
+import os
 from pathlib import Path
 
-BASE = Path.home() / "tw-gov-video" / "output"
+BASE = Path(os.getenv("TW_GOV_VIDEO_BASE") or Path(__file__).resolve().parent) / "output"
 f_12 = BASE / "news_12pm.json"
 f_5 = BASE / "news_5pm.json"
 

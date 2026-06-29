@@ -1,8 +1,0 @@
-file 'frame_intro_ja.png'
-duration 1.48898
-file 'frame_content_ja.png'
-duration 7.78449
-file 'frame_outro_ja.png'
-duration 2.115918
-file 'frame_outro_ja.png'
-duration 0.5

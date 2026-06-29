@@ -1,4 +1,5 @@
 import json
+import os
 import base64
 import time
 import subprocess
@@ -12,7 +13,7 @@ from pathlib import Path
 from config import BASE_DIR as BASE, OUTPUT_DIR, INPUT_JSON
 
 credentials, project = google.auth.default(scopes=["https://www.googleapis.com/auth/cloud-platform"])
-PROJECT_ID = project or "doit-dic-itteam"
+PROJECT_ID = project or os.getenv("GCP_PROJECT_ID")
 
 def synthesize_text(text, out_file):
     auth_req = google.auth.transport.requests.Request()

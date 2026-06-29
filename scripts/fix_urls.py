@@ -1,8 +1,6 @@
 import json
-from pathlib import Path
+from config import OUTPUT_DIR, INPUT_JSON
 
-OUTPUT_DIR = Path.home() / "tw-gov-video" / "output"
-INPUT_JSON = OUTPUT_DIR / "selected_articles.json"
 CANDIDATES_JSON = OUTPUT_DIR / "llm_candidates.json"
 
 def main():

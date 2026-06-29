@@ -1,3 +1,0 @@
-file 'v4_clip_intro_en.mp4'
-file 'v4_clip_content_en.mp4'
-file 'v4_clip_outro_en.mp4'

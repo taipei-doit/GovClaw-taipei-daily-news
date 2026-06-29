@@ -1,3 +1,0 @@
-file 'clip_intro_en.mp4'
-file 'clip_content_en.mp4'
-file 'clip_outro_en.mp4'
